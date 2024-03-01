@@ -31,7 +31,7 @@ exports.getProviders = async (req,res,next) => {
     //Sort 
     if (req.query.sort) {
         const sortBy = req.query.select.split(',').join(' ');
-        query = query.select(sortBy);
+        query = query.sort(sortBy);
     } else {
         query = query.sort("name");
     }
