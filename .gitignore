@@ -1,4 +1,4 @@
 # ignore all node_modules
 node_modules/*
 # ignore confi flies
-config/config.env
+# config/config.env
