@@ -13,6 +13,7 @@ connectDB();
 const providers = require('./routes/providers');
 const auth = require('./routes/auth');
 const bookings = require('./routes/bookings');
+const calendar = require('./routes/calendar'); 
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use(cookieParser());
 app.use('/api/v1/providers', providers);
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/bookings', bookings);
+app.use('/api/v1/calendar',calendar);
 
 const PORT=process.env.PORT || 5000;
 
