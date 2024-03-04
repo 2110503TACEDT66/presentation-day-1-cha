@@ -5,6 +5,6 @@ const router = express.Router({mergeParams:true});
 
 const {protect, authorize} = require('../middleware/auth');
 
-router.route('/').get(authorize('admin'), getCalendarByDate);
+router.route('/').get(protect,authorize('admin'), getCalendarByDate);
 
 module.exports = router;
